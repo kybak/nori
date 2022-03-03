@@ -1,8 +1,0 @@
-type MarketItemCreated @entity {
-  id: ID!
-  tokenId: BigInt
-  seller: BigInt
-  owner: BigInt
-  price: Int
-  sold: Boolean
-}

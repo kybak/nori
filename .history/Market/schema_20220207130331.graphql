@@ -1,9 +1,0 @@
-type MarketItem @entity {
-  id: ID!
-  itemId: Int
-  tokenId: BigInt
-  seller: Bytes
-  owner: Bytes
-  price: Int
-  sold: Boolean
-}
