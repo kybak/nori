@@ -1,0 +1,17 @@
+type MarketItem @entity {
+  id: ID!
+  tokenId: BigInt
+  seller: Bytes
+  owner: Bytes
+  price: Int
+  sold: Boolean
+}
+
+type Fuck @entity {
+  id: ID!
+  tokenId: BigInt
+  seller: Bytes
+  owner: Bytes
+  price: Int
+  sold: Boolean
+}

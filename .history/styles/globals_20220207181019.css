@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+div,
+h2 {
+  color: #5c5d66;
+}

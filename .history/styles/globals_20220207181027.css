@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+div,
+span,
+h2 {
+  color: #5c5d66;
+}

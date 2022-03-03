@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Market
+    network: mumbai
+    source:
+      address: "0x154051f00e3C01427439801A3F7Db7a8c7E9bE68"
+      abi: Market
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - MarketItemCreated
+        - MarketItem
+      abis:
+        - name: Market
+          file: ./abis/Market.json
+      eventHandlers:
+        - event: MarketItemCreated(indexed uint256,indexed address,indexed uint256,address,address,uint256,bool)
+          handler: handleMarketItemCreated
+      file: ./src/mapping.ts
