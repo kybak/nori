@@ -17,7 +17,7 @@ const resolvers = {
       // Note: would definitely organize this out into separate file
 
       // Start of quantity search algo
-      // Uses a greedy approach, decrementing amountFilled until amountNeeded - amountFilled is 0
+      // Uses a greedy approach, incrementing amountFilled until amountNeeded - amountFilled is 0
 
       // Sorting may not be necessary, especially with a FIFO approach but this way we return the least amount of items
       itemsData.sort(function(a: CarbonRemoval, b: CarbonRemoval) {
