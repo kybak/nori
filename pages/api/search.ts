@@ -16,6 +16,10 @@ const resolvers = {
     async search(parent, args, context) {
       // Note: would definitely organize this out into separate file
 
+      // Start of quantity search algo
+      // Uses a greedy approach, decrementing amountFilled until amountNeeded - amountFilled is 0
+
+      // Sorting may not be necessary, especially with a FIFO approach but this way we return the least amount of items
       itemsData.sort(function(a: CarbonRemoval, b: CarbonRemoval) {
         return b.quantity - a.quantity;
       });
@@ -26,7 +30,7 @@ const resolvers = {
       let amountNeeded: number = args.quantity;
 
       for (let item of itemsData) {
-        let remaining: number = amountNeeded - amountFilled;
+        let remaining: number = amountNeeded - amountFilled; // used to determine how much more we need
 
         // base case
         if (remaining === 0) {
